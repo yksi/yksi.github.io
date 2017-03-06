@@ -10,6 +10,9 @@ sudo wget krushelnytskyi.github.io/bin/linux/monoupper -O /usr/bin/monoupper | s
 
 ### Windows
 
+Just download exe-compiled file and use it from Windows Shell
+[Download](https://krushelnytskyi.github.io/bin/windows/monoupper.exe)
+
 
 
 ## Usage
