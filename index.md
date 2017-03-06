@@ -3,7 +3,10 @@
 ## Installation
 
 ### Linux
-
+Use wget utility
+```bash
+sudo wget krushelnytskyi.github.io/bin/linux/monoupper -O /usr/bin/monoupper | sudo chmod a+x /usr/bin/monoupper
+```
 
 ### Windows
 
