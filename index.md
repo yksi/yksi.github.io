@@ -76,5 +76,4 @@ Value of "index.php.title": Monoupper Site
 ```
 Of course you can use multiple keys in monoupper.json file.
 
-All application sources are stored in repositories of project
-https://bitbucket.org/account/user/monoupper/projects/MON
+All application sources are stored in repositories of [monoupper-apps](https://bitbucket.org/account/user/monoupper/projects/MON) project
