@@ -96,10 +96,10 @@ var app = _angular2.default.module('application', ['ngRoute']);
  */
 app.config(function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: '/pages/index.html',
+        templateUrl: window.location.pathname + "pages/index.html",
         controller: 'IndexController'
     }).otherwise({
-        templateUrl: '/pages/not_found.html'
+        templateUrl: window.location.pathname + "pages/not_found.html"
     });
 });
 
