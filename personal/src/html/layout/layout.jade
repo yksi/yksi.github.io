@@ -1,0 +1,11 @@
+html
+    head
+        title
+            block title
+                = "Vitalii Krushelnytskyi"
+    body(ng-app='application')
+        a(href='/#!app') App
+        block body
+            .content(ng-view)
+        block javascript
+            script(src="/js/application.js")
