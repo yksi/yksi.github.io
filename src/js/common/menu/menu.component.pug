@@ -1,0 +1,7 @@
+ul.navigation
+    li
+        a(ui-sref='about' ng-class="{active: $ctrl.$state.includes('about')}") About Me
+    li
+        a(ui-sref='contact' ng-class="{active: $ctrl.$state.includes('contact')}" ) Contact me
+    li.right
+        a(ui-sref='experiments' ng-class="{active: $ctrl.$state.includes('experiments')}") Experiments

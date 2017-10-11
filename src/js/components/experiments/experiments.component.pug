@@ -1,0 +1,10 @@
+.card
+    h1
+        i.fa.fa-bicycle.text-green
+        |  Experiments
+    div(ng-repeat='experiment in $ctrl.experiments')
+        .title {{experiment.title}}
+        | {{experiment.description}}
+        br
+        a(ui-sref='{{experiment.link}}') More details
+        hr

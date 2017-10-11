@@ -1,0 +1,35 @@
+menu {
+  padding: 0;
+}
+
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: @navbar-background;
+}
+
+ul.navigation > li {
+  float: left;
+}
+
+ul.navigation > li.right {
+  float: right;
+}
+
+ul.navigation > li > a {
+  display: block;
+  color: @navbar-link-color;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navigation > li > a:hover {
+  background-color: @navbar-link-hover-color;
+}
+
+ul.navigation > li > a.active {
+  background-color: @base-green;
+}

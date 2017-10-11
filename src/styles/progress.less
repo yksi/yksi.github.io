@@ -1,0 +1,23 @@
+.progress-wrapper {
+  width: 100%;
+  background-color: @main-background;
+  padding: 2px;
+}
+
+.progress-wrapper.rounded {
+  border-radius: 16px;
+}
+
+.progress-wrapper.rounded span {
+  border-radius: 16px;
+}
+
+.progress-wrapper > span {
+  background-color: @base-green;
+  text-align: center;
+  display: block;
+}
+
+.progress-wrapper span::after {
+  content: "\200B";
+}

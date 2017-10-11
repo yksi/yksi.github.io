@@ -1,0 +1,20 @@
+.card.profile-card
+    .container
+        img(src='images/vitalii.jpg', alt='Vitalii', style='width:100%')
+        h1.title Vitalii Krushelnytskyi
+    p.title Developer
+    a(href='#')
+        i.fa.fa-dribbble
+    a(href='#')
+        i.fa.fa-twitter
+    a(href='#')
+        i.fa.fa-linkedin
+    a(href='#')
+        i.fa.fa-facebook
+    p
+        a.button(ui-sref='contact') Contact
+.card
+    h3
+        i.fa.fa-star.text-green
+        |  Skills
+    skill(ng-repeat='skill in $ctrl.skills' skill='skill')

@@ -1,0 +1,20 @@
+.card
+    h1
+        i.fa.fa-briefcase.text-green
+        |  Work Experience
+    div(ng-repeat='job in $ctrl.experience')
+        .text-2x.title {{job.title}}
+        span.text-green
+            i.fa.fa-calendar= ' '
+            |  {{job.startDate | date:'longDate'}}
+        span.text-green
+            | !{' '}-!{' '}
+        span.text-green(ng-if='job.endDate')
+            |  {{job.endDate | date:'longDate'}}
+        span.label.label-green(ng-if='!job.endDate') Current
+        .title {{job.description}}
+        hr
+.card
+    h1
+        i.fa.fa-certificate.text-green
+        |  Education

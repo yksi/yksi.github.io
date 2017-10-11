@@ -1,0 +1,65 @@
+.card
+    h3(id='monoupper-app-is-an-application-manager.') Monoupper app is an application manager.
+    h2#installation Installation
+    h3#linux Linux
+    p Use wget utility to install monoupper on your pc
+    pre.sourceCode.bash
+        code.sourceCode.bash sudo wget krushelnytskyi.github.io/bin/linux/monoupper -O /usr/bin/monoupper | sudo chmod a+x /usr/bin/monoupper
+    h3#windows Windows
+    p
+        | Just download exe-compiled file and use it from Windows Shell
+        a(href='https://krushelnytskyi.github.io/bin/windows/monoupper.exe') Download
+    h2#usage Usage
+    p
+        | For now there are 2 basic commands in console application (
+        code list
+        |  and
+        code install
+        | )
+    p Base list usage
+    pre.sourceCode.bash.
+    p
+        | In the result we can see list of applications slugs. This slugs can be used to install those application
+    p This is example of installation command
+    pre.sourceCode.bash.
+    p
+        | Main feature of monoupper is formatting source code. Format instructions stored in
+        code monoupper.json
+        |  file in a root of application repository. For example, we want to create index.php with some custom title.
+    p The folder structure going to look like
+    pre.
+    p
+        | In a
+        code index.php
+        |  we have to use
+        code <[{
+        |  as open format variable tag and
+        code }]>
+        |  as close tag. For example:
+    pre.sourceCode.php.
+    p
+        | In our
+        code monoupper.json
+        | :
+    pre.sourceCode.json.
+    p
+        | The first key is
+        code fields
+        |  - general information about our format variables. Next key is custom, recommended to use filename for more information. and the lowest key is
+        em variable name
+        | . Filename key and variable name key must be concatenated with
+        code .
+        em (dot symbol)
+        |  in the project source code.
+    p
+        | So, imagine, that our project has name
+        code php-base-app
+        | . To install project use
+        code install
+        |  command.
+    pre.sourceCode.bash.
+    p Of course you can use multiple keys in monoupper.json file.
+    p
+        | All application sources are stored in repositories of
+        a(href='https://bitbucket.org/account/user/monoupper/projects/MON') monoupper-apps
+        |  project

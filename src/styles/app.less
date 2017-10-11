@@ -1,0 +1,62 @@
+@import "colors";
+@import "navbar";
+@import "card";
+@import "grid";
+@import "progress";
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('../fonts/Mukta-Regular.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Mukta';
+}
+
+body {
+  background: @main-background;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  margin: 10px 3%;
+}
+
+.text-2x {
+  font-weight: 100;
+  font-size: 25px !important;
+}
+
+hr {
+  border: 0;
+  border-top-width: 0px;
+  border-top-style: none;
+  border-top-color: currentcolor;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.f-input {
+  outline: none;
+  border: 2px solid @main-background;
+  padding: 8px 10px;
+  font-size: 16px;
+  width: 100%;
+  font-family: Mukta;
+}
+
+.label {
+  margin: 0;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+skill {
+  display: block;
+}
+
+a {
+  color: @base-green;
+}
