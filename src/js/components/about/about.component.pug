@@ -13,8 +13,24 @@
             |  {{job.endDate | date:'longDate'}}
         span.label.label-green(ng-if='!job.endDate') Current
         .title {{job.description}}
+        div(ng-if="job.tags")
+            span
+                | Skills:
+                ul.tags
+                    li(ng-repeat="tag in job.tags")
+                        a.tag(href="https://www.google.com/search?q={{tag}}", target="_blank") {{tag}}
         hr
 .card
     h1
         i.fa.fa-certificate.text-green
         |  Education
+    div(ng-repeat='education in $ctrl.educations')
+        .text-2x.title {{education.establishment}}
+        .title {{education.degree}} / {{education.qualification}}
+        span.text-green
+            i.fa.fa-calendar= ' '
+            |  {{education.startDate | date:'longDate'}}
+        span.text-green
+            | !{' '}-!{' '}
+        span.text-green
+            |  {{education.endDate | date:'longDate'}}
