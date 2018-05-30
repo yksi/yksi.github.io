@@ -5,13 +5,13 @@
 ### Linux
 Use wget utility to install monoupper on your pc
 ```bash
-sudo wget krushelnytskyi.github.io/bin/linux/monoupper -O /usr/bin/monoupper | sudo chmod a+x /usr/bin/monoupper
+sudo wget krushelnytskyi.github.io/monoupper/bin/linux/monoupper -O /usr/bin/monoupper | sudo chmod a+x /usr/bin/monoupper
 ```
 
 ### Windows
 
 Just download exe-compiled file and use it from Windows Shell
-[Download](https://krushelnytskyi.github.io/bin/windows/monoupper.exe)
+[Download](https://krushelnytskyi.github.io/monoupper/bin/windows/monoupper.exe)
 
 
 
