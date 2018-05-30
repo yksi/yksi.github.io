@@ -46482,7 +46482,7 @@ var MonouppperComponent = exports.MonouppperComponent = {
 
 var pug = __webpack_require__(7);
 
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Ciframe src=\"https:\u002F\u002Fkrushelnytskyi.github.io\u002Fmonoupper\u002F\"\u003E\u003C\u002Fiframe\u003E";;return pug_html;};
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Ciframe src=\"https:\u002F\u002Fkrushelnytskyi.github.io\u002Fmonoupper\u002F\" style=\"border: none;width: 100%;height: 333%;min-height: 100%;\"\u003E\u003C\u002Fiframe\u003E";;return pug_html;};
 module.exports = template;
 
 /***/ }),
