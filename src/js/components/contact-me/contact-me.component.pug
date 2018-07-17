@@ -2,13 +2,25 @@
     h1
         i.fa.fa-envelope-o.text-green
         |  Contact me
-        .row
-            .col-3
-                .title Title
-            .col-8
-                input.f-input.green
-        .row
-            .col-3
-                .title Message
-            .col-8
-                textarea(rows=10).f-input.green
+    .row
+        .col-3
+            .title Reply to (optional)
+        .col-8
+            input(ng-model="$ctrl.email.email").f-input.green
+    .row
+        .col-3
+            .title Title
+        .col-8
+            input(ng-model="$ctrl.email.title").f-input.green
+            span(ng-if="$ctrl.sent && !$ctrl.email.title").label Title cannot be empty
+    .row
+        .col-3
+            .title Message
+        .col-8
+            textarea(rows=10 ng-model="$ctrl.email.message").f-input.green
+            span(ng-if="$ctrl.sent && !$ctrl.email.message").label Message cannot be empty
+    .form-group(align="center")
+        div(ng-if="$ctrl.sentSuccess" align="center")
+            .label-green Message successfully sent
+            br
+        button(ng-click="$ctrl.send()").send-contact Send

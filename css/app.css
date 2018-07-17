@@ -199,6 +199,17 @@ ul.navigation > li > a.active {
 .tag:hover::after {
   border-left-color: #4caf50;
 }
+.send-contact {
+  color: white;
+  background-color: #4caf50;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.send-contact:hover {
+  background-color: #6ec071;
+}
 @font-face {
   font-family: 'Mukta';
   src: url('../fonts/Mukta-Regular.ttf') format('truetype');

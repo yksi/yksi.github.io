@@ -46319,7 +46319,35 @@ var _contactMeComponent2 = _interopRequireDefault(_contactMeComponent);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ContactMeComponent = exports.ContactMeComponent = {
-    template: _contactMeComponent2.default
+    template: _contactMeComponent2.default,
+    controller: function controller($http) {
+        this.$onInit = function () {
+            this.email = {
+                email: '',
+                title: '',
+                message: ''
+            };
+
+            this.sent = false;
+            this.sentSuccess = false;
+        };
+
+        this.send = function () {
+            var _this = this;
+
+            this.sent = true;
+            if (!this.email.title || !this.email.message) return;
+
+            $http({
+                method: 'POST',
+                url: 'https://ccd-terminal.herokuapp.com/contact',
+                data: this.email
+            }).then(function () {
+                _this.$onInit();
+                _this.sentSuccess = true;
+            });
+        };
+    }
 };
 
 /***/ }),
@@ -46328,7 +46356,7 @@ var ContactMeComponent = exports.ContactMeComponent = {
 
 var pug = __webpack_require__(7);
 
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cdiv class=\"card\"\u003E\u003Ch1\u003E\u003Ci class=\"fa fa-envelope-o text-green\"\u003E\u003C\u002Fi\u003E Contact me\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-3\"\u003E\u003Cdiv class=\"title\"\u003ETitle\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Cinput class=\"f-input green\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-3\"\u003E\u003Cdiv class=\"title\"\u003EMessage\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Ctextarea class=\"f-input green\" rows=\"10\"\u003E\u003C\u002Ftextarea\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fh1\u003E\u003C\u002Fdiv\u003E";;return pug_html;};
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cdiv class=\"card\"\u003E\u003Ch1\u003E\u003Ci class=\"fa fa-envelope-o text-green\"\u003E\u003C\u002Fi\u003E Contact me\u003C\u002Fh1\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-3\"\u003E\u003Cdiv class=\"title\"\u003EReply to (optional)\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Cinput class=\"f-input green\" ng-model=\"$ctrl.email.email\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-3\"\u003E\u003Cdiv class=\"title\"\u003ETitle\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Cinput class=\"f-input green\" ng-model=\"$ctrl.email.title\"\u003E\u003Cspan class=\"label\" ng-if=\"$ctrl.sent &amp;&amp; !$ctrl.email.title\"\u003ETitle cannot be empty\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-3\"\u003E\u003Cdiv class=\"title\"\u003EMessage\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Ctextarea class=\"f-input green\" rows=\"10\" ng-model=\"$ctrl.email.message\"\u003E\u003C\u002Ftextarea\u003E\u003Cspan class=\"label\" ng-if=\"$ctrl.sent &amp;&amp; !$ctrl.email.message\"\u003EMessage cannot be empty\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"form-group\" align=\"center\"\u003E\u003Cdiv ng-if=\"$ctrl.sentSuccess\" align=\"center\"\u003E\u003Cdiv class=\"label-green\"\u003EMessage successfully sent\u003C\u002Fdiv\u003E\u003Cbr\u003E\u003C\u002Fdiv\u003E\u003Cbutton class=\"send-contact\" ng-click=\"$ctrl.send()\"\u003ESend\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";;return pug_html;};
 module.exports = template;
 
 /***/ }),
