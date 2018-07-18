@@ -29,7 +29,8 @@ gulp.task('javascript', function() {
                     test: /\.js$/,
                     use: {
                         loader: 'babel-loader?presets[]=es2015',
-                    }
+                    },
+                    exclude: [/node_modules/]
                 }
             ]
 

@@ -11,13 +11,18 @@ export const ContactMeComponent = {
             };
 
             this.sent = false;
+            this.loading = false;
             this.sentSuccess = false;
         };
 
         this.send = function () {
+            if (this.loading) return;
+
             this.sent = true;
+            this.sentSuccess = false;
             if (!this.email.title || !this.email.message) return;
 
+            this.loading = true;
             $http({
                 method: 'POST',
                 url: 'https://ccd-terminal.herokuapp.com/contact',
@@ -25,6 +30,7 @@ export const ContactMeComponent = {
             }).then(
                 () => {
                     this.$onInit();
+                    this.loading = false;
                     this.sentSuccess = true;
                 },
             )

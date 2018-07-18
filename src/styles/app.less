@@ -20,6 +20,7 @@ body {
   background: @main-background;
   padding: 0;
   margin: 0;
+  overflow: scroll;
 }
 
 .content {
@@ -61,4 +62,18 @@ skill {
 
 a {
   color: @base-green;
+}
+
+.loading {
+  filter: blur(5px);
+}
+
+.loading-text {
+  position: absolute;
+  top: 45%;
+  font-size: 30px;
+  font-weight: bold;
+  color: @dark-grey;
+  text-align: center;
+  width: 100%;
 }
