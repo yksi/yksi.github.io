@@ -2,7 +2,7 @@ import template from './contact-me.component.pug'
 
 export const ContactMeComponent = {
     template,
-    controller ($http) {
+    controller ($rootScope, $http) {
         this.$onInit = function () {
             this.email = {
                 email: '',
@@ -13,6 +13,8 @@ export const ContactMeComponent = {
             this.sent = false;
             this.loading = false;
             this.sentSuccess = false;
+
+            $rootScope.background = 'pastel-green';
         };
 
         this.send = function () {

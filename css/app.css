@@ -1,20 +1,28 @@
 .text-green {
   color: #4caf50;
 }
+.text-grey {
+  color: #999999;
+}
 .label-green {
   color: white;
   background-color: #4caf50;
+}
+.label-grey {
+  color: white;
+  background-color: #999999;
 }
 .f-input.green {
   border: 2px solid #4caf50;
 }
 menu {
   padding: 0;
+  -webkit-margin-after: 0;
 }
 ul.navigation {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 8px;
   overflow: hidden;
   background-color: #333;
 }
@@ -35,7 +43,8 @@ ul.navigation > li > a:hover {
   background-color: #111;
 }
 ul.navigation > li > a.active {
-  background-color: #4caf50;
+  border-bottom: 4px solid #4caf50;
+  background-color: #161616;
 }
 .card {
   background-color: #ffffff;
@@ -83,7 +92,7 @@ ul.navigation > li > a.active {
   float: left;
 }
 @media (min-width: 901px) {
-  [class*="col-"] {
+  .row > [class*="col-"] {
     padding: 15px;
   }
 }
@@ -225,8 +234,9 @@ body {
   margin: 0;
   overflow: scroll;
 }
-.content {
-  margin: 10px 3%;
+.text-small {
+  font-size: 12px;
+  vertical-align: 2px;
 }
 .text-2x {
   font-weight: 100;

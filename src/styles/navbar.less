@@ -1,11 +1,12 @@
 menu {
   padding: 0;
+  -webkit-margin-after: 0;
 }
 
 ul.navigation {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 8px;
   overflow: hidden;
   background-color: @navbar-background;
 }
@@ -31,5 +32,6 @@ ul.navigation > li > a:hover {
 }
 
 ul.navigation > li > a.active {
-  background-color: @base-green;
+  border-bottom: 4px solid @base-green;
+  background-color: lighten(@navbar-link-hover-color, 2%);
 }
