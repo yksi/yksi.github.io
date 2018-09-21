@@ -48,6 +48,7 @@ body {
     background: rgba(100,113,142,.3);
     transition: background-color .1s ease-in;
     border-color: transparent;
+    border-radius: calc((3.3vh + 3.3vw) / 2);
 }
 
 .links > .link img {
