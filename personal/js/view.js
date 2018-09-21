@@ -27,7 +27,7 @@ window.onload = e => {
 
 window.buildLink = ({url, name, image}) => {
     const linksContainer = document.querySelector('.links-container .links');
-    linksContainer.innerHTML += (`<div class="link"><span><a href="${url}"><img src="${image}" alt="${name}"></a></span></div>`);
+    linksContainer.innerHTML += (`<div class="link"><span><a href="${url}"><img class="shadowed" src="${image}" alt="${name}"></a></span></div>`);
 };
 
 for (const link of links) {

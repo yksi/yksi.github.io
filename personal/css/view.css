@@ -1,13 +1,16 @@
 body {
+    background-position: center center;
+    background-image: url(/personal/img/backgrounds/body/mavericks.jpg);
     margin: 0;
     padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .links-container {
     height: 100vh;
     width: 100vw;
-    background: rgb(191,213,242);
-    background: radial-gradient(circle, rgba(191,213,242,1) 0%, rgba(148,187,233,1) 100%);
+    background: transparent;
 }
 
 .links {
@@ -36,13 +39,23 @@ body {
     margin: auto;
     padding: calc((3vh + 3vw) / 2);
     border-radius: calc((3vh + 3vw) / 2);
+    border: 1.5px solid rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .4);
+    transition: border .3s ease-in;
 }
 
 .links > .link:hover {
     background: rgba(100,113,142,.3);
-    transition: background-color .1s ease-in-out;
+    transition: background-color .1s ease-in;
+    border-color: transparent;
 }
 
 .links > .link img {
     width: 100%;
+}
+
+.links > .link img.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.3));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#999')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=3, OffY=3, Color='#999')";
 }
