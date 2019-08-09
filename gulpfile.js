@@ -56,13 +56,13 @@ gulp.task('html', function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('build', ['styles', 'javascript', 'html']);
+gulp.task('build', gulp.series(['styles', 'javascript', 'html']));
 
 gulp.task('dev', function () {
 
-    gulp.watch('src/styles/**/*.less', ['styles']);
-    gulp.watch(['src/js/**/*.js', 'src/js/**/*.pug'], ['javascript']);
-    gulp.watch('src/html/**/*.jade', ['html']);
+    gulp.watch('src/styles/**/*.less', gulp.series(['styles']));
+    gulp.watch(['src/js/**/*.js', 'src/js/**/*.pug'], gulp.series(['javascript']));
+    gulp.watch('src/html/**/*.jade', gulp.series(['html']));
 
     /**
      * @type {StaticServer}

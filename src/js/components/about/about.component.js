@@ -5,9 +5,21 @@ export const AboutComponent = {
         constructor() {
             this.experience = [
                 {
-                    title: 'Lead Frontend Developer',
-                    startDate: new Date(2017, 11, 5),
+                    title: 'Fullstack Developer',
+                    startDate: new Date(2019, 11, 5),
                     endDate: false,
+                    tags: ['React', 'Webpack', 'Docker', 'PHP', 'Lumen', 'Bash'],
+                },
+                {
+                    title: 'Fullstack Developer',
+                    startDate: new Date(2018, 6, 5),
+                    endDate: new Date(2018, 10, 30),
+                    tags: ['AngularJs', 'Webpack', 'Docker', 'Swarm', 'PHP', 'Lumen', 'Bash'],
+                },
+                {
+                    title: 'Lead Frontend Developer',
+                    startDate: new Date(2018, 10, 30),
+                    endDate: new Date(2019, 6, 5),
                     tags: ['AngularJs', 'Webpack', 'Docker', 'SCRUM'],
                 },
                 {
@@ -20,7 +32,7 @@ export const AboutComponent = {
                     title: 'Lead Developer, Academy Speaker',
                     startDate: new Date(2017,11, 5),
                     endDate: new Date(2017, 7, 5),
-                    tags: ['Zend Framework', 'Laravel', 'NodeJS', 'Golang', 'Docker', 'AngularJS'],
+                    tags: ['Zend Framework', 'Laravel', 'NodeJS', 'Go', 'Docker', 'AngularJS'],
                 },
                 {
                     title: 'Lead Developer',
@@ -58,6 +70,14 @@ export const AboutComponent = {
                     endDate: new Date(2018, 2, 28),
                 },
             ];
+
+            this.search = {
+                'Lumen': 'Lumen micro framework',
+                'Swarm': 'Docker Swarm',
+                'CI': 'Continuous integration',
+                'Go': 'Go Programming language',
+            };
+
 
             this.fetchTags();
         }

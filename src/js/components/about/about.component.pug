@@ -3,25 +3,23 @@
         i.fa.fa-briefcase.text-green
         |  Work Experience
     div(ng-repeat='job in $ctrl.experience')
-        .row
-            .col-4
+        .flex.sb.center
+            div
+                span.text-right.text-2x.title {{job.title}}
+                .title {{job.description}}
+            div
                 span.text-grey
                     i.fa.fa-calendar-o= ' '
                     |  {{job.startDate | date:'longDate'}}
-                span &nbsp;-&nbsp;
+                span.text-grey &nbsp;&mdash;&nbsp;
                 span.text-grey(ng-if='job.endDate')
                     |  {{job.endDate | date:'longDate'}}
                 span.label.label-grey(ng-if='!job.endDate') Current
-            .col-4
-                span.text-right.text-2x.title {{job.title}}
-                .title {{job.description}}
         br
         div(ng-if="job.tags")
-            span
-                | Skills:
-                ul.tags
-                    li(ng-repeat="tag in job.tags")
-                        a.tag(href="https://www.google.com/search?q={{tag}}", target="_blank") {{tag}}
+            ul.tags
+                li(ng-repeat="tag in job.tags")
+                    a.tag(href="https://www.google.com/search?q={{$ctrl.search[tag] || tag}}", target="_blank") {{tag}}
         hr
 .card
     h1

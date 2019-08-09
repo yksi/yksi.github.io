@@ -220,6 +220,15 @@ ul.navigation > li > a.active {
 .send-contact:hover {
   background-color: #6ec071;
 }
+.flex {
+  display: flex;
+}
+.flex.sb {
+  justify-content: space-between;
+}
+.flex.center {
+  align-items: center;
+}
 @font-face {
   font-family: 'Mukta';
   src: url('../fonts/Mukta-Regular.ttf') format('truetype');
