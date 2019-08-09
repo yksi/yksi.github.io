@@ -18,8 +18,8 @@ export const AboutComponent = {
                 },
                 {
                     title: 'Lead Frontend Developer',
-                    startDate: new Date(2018, 10, 30),
-                    endDate: new Date(2019, 6, 5),
+                    startDate: new Date(2017, 10, 30),
+                    endDate: new Date(2018, 6, 5),
                     tags: ['AngularJs', 'Webpack', 'Docker', 'SCRUM'],
                 },
                 {
