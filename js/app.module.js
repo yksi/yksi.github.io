@@ -73469,8 +73469,8 @@ var AboutComponent = exports.AboutComponent = {
                 tags: ['AngularJs', 'Webpack', 'Docker', 'Swarm', 'PHP', 'Lumen', 'Bash']
             }, {
                 title: 'Lead Frontend Developer',
-                startDate: new Date(2018, 10, 30),
-                endDate: new Date(2019, 6, 5),
+                startDate: new Date(2017, 10, 30),
+                endDate: new Date(2018, 6, 5),
                 tags: ['AngularJs', 'Webpack', 'Docker', 'SCRUM']
             }, {
                 title: 'Self Employer',
@@ -73479,13 +73479,13 @@ var AboutComponent = exports.AboutComponent = {
                 tags: ['Ruby on Rails', 'ES6', 'PostgreSQL', 'MySQL', 'UML']
             }, {
                 title: 'Lead Developer, Academy Speaker',
-                startDate: new Date(2017, 11, 5),
+                startDate: new Date(2016, 11, 5),
                 endDate: new Date(2017, 7, 5),
                 tags: ['Zend Framework', 'Laravel', 'NodeJS', 'Go', 'Docker', 'AngularJS']
             }, {
                 title: 'Lead Developer',
                 startDate: new Date(2016, 3, 10),
-                endDate: new Date(2017, 10, 11),
+                endDate: new Date(2016, 10, 11),
                 tags: ['Zend Framework', 'SCRUM', 'CI', 'Deployment']
             }, {
                 title: 'PHP Developer',

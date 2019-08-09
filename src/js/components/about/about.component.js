@@ -30,14 +30,14 @@ export const AboutComponent = {
                 },
                 {
                     title: 'Lead Developer, Academy Speaker',
-                    startDate: new Date(2017,11, 5),
+                    startDate: new Date(2016,11, 5),
                     endDate: new Date(2017, 7, 5),
                     tags: ['Zend Framework', 'Laravel', 'NodeJS', 'Go', 'Docker', 'AngularJS'],
                 },
                 {
                     title: 'Lead Developer',
                     startDate: new Date(2016, 3, 10),
-                    endDate: new Date(2017,10, 11),
+                    endDate: new Date(2016,10, 11),
                     tags: ['Zend Framework', 'SCRUM', 'CI', 'Deployment'],
                 },
                 {
