@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Збір Коштів на ЗСУ/55 окрема стрілецька бригада</title>
+    <link rel="stylesheet" href="/add-ons/donut-07-22/index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Збір Коштів на потреби ЗСУ</h1>
+            <h2>
+                55 окрема стрілецький батальйон
+            </h2>
+
+            <div class="content">
+                <p>
+                    Привіт друзі, нам потрібно зібрати кошти для окремого 55-го стрілкового батальйону в якому мій батько.
+                    Наразі їм потрібні генератори 5кв, каністри, казанки. Список буде поповнюватись.
+                    Також батальйон збирає кошти на мікроавтобус.
+                    Будемо раді будь-якій вашій допомозі. А також за інформацію по наявних генераторах і репости.
+                </p>
+
+                <p>
+                    Переказати кошти можна за реквізитами
+                </p>
+
+                <div>
+                    Монобанк:
+                </div>
+                <div class="card-number">
+                    <input
+                        id="donut-07-22-card-number"
+                        type="tel"
+                        value="4441 1144 6404 0276"
+                        inputmode="numeric"
+                        pattern="[0-9\s]{13,19}"
+                        autocomplete="cc-number"
+                        maxlength="19"
+                        readonly
+                    />
+                    <button class="copy" id="donut-07-22-copy-card-number" onclick="copyCardNumber()">
+                        Копіювати номер карти
+                    </button>
+                </div>
+                <div>
+                    Світлана Крушельницька
+                </div>
+
+                <div>
+                    Слава Україні🇺🇦
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyCardNumber() {
+          const copyText = document.getElementById('donut-07-22-card-number');
+
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+
+          navigator.clipboard.writeText(copyText.value);
+
+          const button = document.getElementById('donut-07-22-copy-card-number');
+
+          button.disabled = true
+          button.innerText = 'Номер карти скопійовано'
+        }
+    </script>
+</body>
+</html>
